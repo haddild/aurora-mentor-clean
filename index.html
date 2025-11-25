@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Viewport for Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Aurora — Personal Mentor AI</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- App Icons -->
+    <link rel="icon" href="/icons/icon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#9b59b6" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <!-- React Entry -->
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Register Service Worker -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/service-worker.js");
+      }
+    </script>
+  </body>
+</html>
